@@ -1,0 +1,330 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --mainColor: #f97c14;
+    --coverColor: white;
+}
+
+.top-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: var(--mainColor);
+    color: white;
+    display: none;
+}
+.top-btn:hover{
+    transform: scale(1.05);
+    transition-duration: 1s;
+    -webkit-box-shadow: 0px 0px 11px -3px #000000; 
+    box-shadow: 0px 0px 11px -3px #000000;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+/* Satrt Header */
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .fa-list-ul{
+    display: none;
+}
+header{
+    width: 100%;
+    background-color: gray;
+    color: white;
+    opacity: 0.9;
+    padding: 20px 0px;
+    position: fixed;
+    z-index: 66;
+}
+header .logo{
+    font-size: 30px;
+}
+header .logo span{
+    color: var(--mainColor);
+}
+header .list ul{
+    list-style: none;
+}
+header .list ul li{
+    float: left;
+    margin-left: 30px;
+    font-size: 20px;
+}
+header .list ul li:hover{
+    color: var(--mainColor);
+}
+/* End Header */
+
+/* Satrt Cover */
+.cover .container{
+    position: relative;
+    top: 50%;
+    left: 0;
+}
+.cover .information{
+    position: absolute;
+    z-index: 55;
+}
+.cover{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/james-harrison-UVMPVIRCF5w-unsplash.jpg);
+    background-size: cover;
+}
+.cover .container .information .name{
+    font-size: 50px;
+    font-weight: bold;
+}
+.cover .container .information p{
+    color: var(--coverColor);
+}
+.cover .container .information p:not(:first-child){
+    font-size: 40px;
+    margin: 10px 0px;
+    border-bottom: 0.5px solid var(--coverColor);
+    padding: 20px 0px;
+}
+.cover .container .information ul {
+    list-style: none;
+}.cover .container .information ul li{
+    font-size: 30px;
+    float: left
+}
+.cover .container .information ul li:not(:first-child){
+    margin-left: 40px;
+}
+.cover .container .information ul li a{
+    color: var(--coverColor);
+}
+.cover .opacity {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #44383866;
+}
+/* End Cover */
+
+.section{
+    margin-top: 80px;
+}
+.section .container{
+    display: flex;
+    justify-content: space-between;
+}
+.section .title{
+    width: 20%;
+}
+.section .details{
+    width: 80%;
+}
+.section .container .title p:first-child{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Satrt Intro */
+.intro .container .details p:first-child{
+    margin-bottom: 20px;
+}
+.skills{
+    margin-top: 50px;
+}
+.skills .skill{
+    margin-bottom: 20px;
+}
+.skills .skill p:first-child span:last-child{
+    float: right;
+}
+.skills .skill .html{
+    width: 100%;
+    height: 7px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, var(--mainColor) 80%, #ddd 20%);
+}
+.skills .skill .js{
+    width: 100%;
+    height: 7px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, var(--mainColor) 10%, #ddd 10%);
+}
+.skills .skill .css{
+    width: 100%;
+    height: 7px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, var(--mainColor) 50%, #ddd 50%);
+}
+.skills .skill .ps{
+    width: 100%;
+    height: 7px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, var(--mainColor) 70%, #ddd 30%);
+}
+/* End Intro */
+/* Satrt Experience */
+.experience{
+    background-color: #ddd;
+    padding: 50px 0px;
+}
+.experience .container .title{
+    grid-column: span 3;
+}
+.experience .container .details{
+    grid-column: span 9;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+.experience .container .details .tool{
+    grid-column: span 4;
+    background-color: white;
+    color: black;
+    padding: 20px 20px;
+}
+.experience .container .details .tool p{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.experience .container .details div:hover{
+    background-color: var(--mainColor);
+    color: white;
+    transform: scale(1.05);
+    transition-duration: 1s;
+}
+/* End Experience */
+/* Start Work */
+.works .container .details{
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    grid-gap: 20px 20px
+}
+.works .container .details .work:first-child{
+    grid-column: span 3;
+}
+.works .container .details .work:nth-child(2){
+    grid-column: span 3;
+}
+.works .container .details .work:nth-child(3){
+    grid-column: span 6;
+}
+.works .container .details .work:nth-child(4){
+    grid-column: span 6;
+}
+.works .container .details .work:nth-child(5){
+    grid-column: span 6;
+}
+.works .container .details .work img{
+    width: 100%;
+    overflow: hidden;
+}
+.works .container .details .work img:hover{
+    transform: scale(1.05);
+    transition-duration: 1s;
+    box-shadow: 2px 0px 26px 5px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 2px 0px 26px 5px rgba(0,0,0,0.23);
+    -moz-box-shadow: 2px 0px 26px 5px rgba(0,0,0,0.23);
+}
+/* End Experience */
+/* Satrt Contact */
+.contact{
+    width: 100%;
+    background-color: #ddd;
+    margin-top: 80px;
+    padding: 100px 0px;
+}
+.contact .container .details{
+    display: flex;
+    justify-content: space-around;
+}
+/* End Contact */
+/* Start Footer */
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 7px 0px;
+}
+footer .container .logo span {
+    color: var(--mainColor);
+}
+/* End Footer */
+
+@media (max-width: 767px){
+    .section .container,
+    .contact .container .details{
+        flex-direction: column;
+        align-items: center;
+    }
+    .experience .container .details .tool{
+        grid-column: span 12;
+        text-align: center;
+    }
+    .section .container .title{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .section .container .details{
+        width: 100%;
+    }
+    .contact .container .details div {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    header .logo{
+        font-size: 22px;
+    }
+    header .container .fa-list-ul{
+        display: block;
+        font-size: 22px;
+    }
+    ul{
+        position: relative;
+    }
+    .list::after{
+        content: "";
+        position: absolute;
+        top: -6px;
+        right: 44px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        border-width: 18px;
+    }
+    .list:hover{
+        display: block;
+    }
+    .list{
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        background-color: white;
+        left: 0px;
+        display: none;
+    }
+    .fa-list-ul:hover + .list{
+        display: block;
+    }
+    header .list ul li {
+        float: none;
+        margin-left: 0px;
+        font-size: 22px;
+        padding: 30px;
+    }
+    header .list ul li:hover{
+        color: white;
+        background-color: var(--mainColor);
+    }
+    .works .container .details{
+        grid-gap: 7px 7px;
+    }
+}
